@@ -32,7 +32,8 @@ public class WebSecurityConfig {
 		http
 				.authorizeHttpRequests(requests -> requests
 						.requestMatchers("/home").hasRole("USER")
-						.requestMatchers("/register" , "/js/**", "/css/**").permitAll()
+
+						.requestMatchers("/register","/js/**", "/css/**").permitAll()
 						.anyRequest().authenticated())
 				.formLogin(form -> form
 						.loginPage("/login")
@@ -51,7 +52,12 @@ public class WebSecurityConfig {
 				.password("supersecured")
 				.roles("USER")
 				.build();
+		UserDetails guest = User.withDefaultPasswordEncoder()
+				.username("alan_turing")
+				.password("guestpassword")
+				.roles("GUEST") // Ce rôle n'a pas accès à /home
+				.build();
 
-		return new InMemoryUserDetailsManager(user);
+		return new InMemoryUserDetailsManager(user, guest);
 	}
 }

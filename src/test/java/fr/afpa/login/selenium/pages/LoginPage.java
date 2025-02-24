@@ -45,7 +45,7 @@ public class LoginPage {
         // TODO retourner l'input "username"
         // Documentation :
         // https://www.selenium.dev/documentation/webdriver/elements/finders/
-        
+        return this.config.getWebDriver().findElement(By.name("username"));
     }
 
     /**
@@ -56,7 +56,7 @@ public class LoginPage {
         // TODO retourner l'input "password"
         // Documentation :
         // https://www.selenium.dev/documentation/webdriver/elements/finders/
-        
+        return this.config.getWebDriver().findElement(By.name("password"));
     }
 
     /**
@@ -66,7 +66,7 @@ public class LoginPage {
         // TODO retourner l'input "submit"
         // Documentation :
         // https://www.selenium.dev/documentation/webdriver/elements/finders/
-        
+        return this.config.getWebDriver().findElement(By.cssSelector(".input-button"));
     }
 
     /**
@@ -77,7 +77,8 @@ public class LoginPage {
         // TODO retourner le paragraphe contenant le message d'erreur
         // Documentation :
         // https://www.selenium.dev/documentation/webdriver/elements/finders/
-        
+
+        return this.config.getWebDriver().findElement(By.tagName("p"));
     }
 
     /**
