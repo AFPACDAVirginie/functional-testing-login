@@ -2,7 +2,7 @@
 
 Ce projet est utilisé dans le cadre de la formation CDA à l'Afpa.
 L'objectif est de travailler sur la mise en place de **tests fonctionnels automatisés** en utilisant Selenium.
-
+utilisation du projet sur IntellijIdea
 ## Travail à effectuer
 
 Compléter la classe `SeleniumConfig` pour :
@@ -33,3 +33,9 @@ Mais également en utilisant Gradle :
 Bon courage !
 
 ![Différents niveaux de tests](./test-progression.png)
+
+
+ajout de github action Java utilisant Maven.
+
+
+![image](https://github.com/user-attachments/assets/44efb178-bb71-4e2c-b915-3ce5f8c9b859)
